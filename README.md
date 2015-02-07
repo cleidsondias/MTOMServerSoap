@@ -1,4 +1,4 @@
-MTOMServerSoap
+MTOM Server Soap
 ==============
 
 Some Web service APIs take as parameters files that may contain binary data.
