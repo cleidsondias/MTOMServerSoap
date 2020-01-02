@@ -79,7 +79,7 @@ class MimeParser {
 				continue;
 			} else {
 				// check if we hit any of the boundaries
-				if (strlen ( $line ) > 0 && $line [0] == "-") {
+				  if (strlen ( $line ) > 0 && strncmp(trim($line), '--'.$boundary, strlen($boundary)+2) === 0) {
 					if (strcmp ( trim ( $line ), '--' . $boundary ) === 0) {
 						if ($currentPart instanceof MimePart) {
 							$content = substr ( $content, 0, - 2 );
