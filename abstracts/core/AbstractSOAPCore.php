@@ -1,6 +1,6 @@
 <?php
 
-namespace SERVERSOAP\abstracoes\core;
+namespace SERVERSOAP\abstracts\core;
 
 use SERVERSOAP\implement\core\SoapResponse;
 use SERVERSOAP\implement\core\SoapRequest;

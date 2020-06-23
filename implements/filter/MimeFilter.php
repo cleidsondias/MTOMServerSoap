@@ -23,7 +23,7 @@ class MimeFilter extends Filter implements SoapRequestFilter, SoapResponseFilter
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\interfaces\filter\SoapRequestFilter::filterRequest()
+	 * @see \SERVERSOAP\interfaces\filter\SoapRequestFilter::filterRequest()
 	 */
 	public function filterRequest(SoapRequest $request) {
 		// array to store attachments
@@ -60,7 +60,7 @@ class MimeFilter extends Filter implements SoapRequestFilter, SoapResponseFilter
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\interfaces\filter\SoapResponseFilter::filterResponse()
+	 * @see \SERVERSOAP\interfaces\filter\SoapResponseFilter::filterResponse()
 	 */
 	public function filterResponse(SoapResponse $response) {
 		// get attachments from request object

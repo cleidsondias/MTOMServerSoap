@@ -19,7 +19,7 @@ class SoapResponse extends SoapMessage {
 	 * @param unknown $location        	
 	 * @param unknown $action        	
 	 * @param unknown $version        	
-	 * @return \SEISOAP\implementacoes\core\SoapResponse
+	 * @return \SERVERSOAP\implement\core\SoapResponse
 	 */
 	public static function create($content, $location, $action, $version) {
 		$response = new SoapResponse ();

@@ -25,7 +25,7 @@ class TypeConverter implements TypeConverterInterface, SoapConverterInterface {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\interfaces\converter\TypeConverterInterface::getTypeNamespace()
+	 * @see \SERVERSOAP\interfaces\converter\TypeConverterInterface::getTypeNamespace()
 	 */
 	public function getTypeNamespace() {
 	}
@@ -33,7 +33,7 @@ class TypeConverter implements TypeConverterInterface, SoapConverterInterface {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\interfaces\converter\TypeConverterInterface::getTypeName()
+	 * @see \SERVERSOAP\interfaces\converter\TypeConverterInterface::getTypeName()
 	 */
 	public function getTypeName() {
 	}
@@ -41,7 +41,7 @@ class TypeConverter implements TypeConverterInterface, SoapConverterInterface {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\interfaces\TypeConverterInterface::convertXmlToPhp()
+	 * @see \SERVERSOAP\interfaces\TypeConverterInterface::convertXmlToPhp()
 	 */
 	public function convertXmlToPhp($data) {
 	}
@@ -49,7 +49,7 @@ class TypeConverter implements TypeConverterInterface, SoapConverterInterface {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\interfaces\converter\TypeConverterInterface::convertPhpToXml()
+	 * @see \SERVERSOAP\interfaces\converter\TypeConverterInterface::convertPhpToXml()
 	 */
 	public function convertPhpToXml($data) {
 	}
@@ -57,7 +57,7 @@ class TypeConverter implements TypeConverterInterface, SoapConverterInterface {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\interfaces\converter\SoapConverterInterface::setSOAPCore()
+	 * @see \SERVERSOAP\interfaces\converter\SoapConverterInterface::setSOAPCore()
 	 */
 	function setSOAPCore(SOAPCore $soapCore) {
 		$this->soapCore = $soapCore;

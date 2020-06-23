@@ -17,7 +17,7 @@ class SoapRequest extends SoapMessage {
 	 *
 	 * @param string $content        	
 	 * @param string $version        	
-	 * @return \SEISOAP\implementacoes\core\SoapRequest
+	 * @return \SERVERSOAP\implement\core\SoapRequest
 	 */
 	public static function create($content, $version) {
 		$request = new SoapRequest ();

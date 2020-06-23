@@ -18,7 +18,7 @@ class MtomTypeConverter extends TypeConverter {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\abstracoes\converter\TypeConverter::getTypeNamespace()
+	 * @see \SERVERSOAP\abstracts\converter\TypeConverter::getTypeNamespace()
 	 */
 	public function getTypeNamespace() {
 		return 'http://www.w3.org/2001/XMLSchema';
@@ -27,7 +27,7 @@ class MtomTypeConverter extends TypeConverter {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\abstracoes\converter\TypeConverter::getTypeName()
+	 * @see \SERVERSOAP\abstracts\converter\TypeConverter::getTypeName()
 	 */
 	public function getTypeName() {
 		return 'base64Binary';
@@ -36,7 +36,7 @@ class MtomTypeConverter extends TypeConverter {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\abstracoes\converter\TypeConverter::convertXmlToPhp()
+	 * @see \SERVERSOAP\abstracts\converter\TypeConverter::convertXmlToPhp()
 	 */
 	public function convertXmlToPhp($data) {
 		$doc = new \DOMDocument ();
@@ -67,7 +67,7 @@ class MtomTypeConverter extends TypeConverter {
 	/**
 	 * (non-PHPdoc)
 	 *
-	 * @see \SEISOAP\abstracoes\converter\TypeConverter::convertPhpToXml()
+	 * @see \SERVERSOAP\abstracts\converter\TypeConverter::convertPhpToXml()
 	 */
 	public function convertPhpToXml($data) {
 		$part = new MimePart ( $data );

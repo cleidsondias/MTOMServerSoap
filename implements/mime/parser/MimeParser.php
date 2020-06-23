@@ -19,7 +19,7 @@ class MimeParser {
 	 *
 	 * @param string $mimeMessage        	
 	 * @param array $headers        	
-	 * @return \SEISOAP\implementacoes\mime\part\MultiPart
+	 * @return \SERVERSOAP\implement\mime\part\MultiPart
 	 */
 	public static function parseMimeMessage($mimeMessage, array $headers = array()) {
 		$boundary = null;

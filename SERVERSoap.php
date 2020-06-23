@@ -50,7 +50,7 @@ class SERVERSoap extends \SoapServer {
 	protected $soapVersion = SOAP_1_1;
 	
 	/**
-	 * core of SEISOAP
+	 * core of SOAPCore
 	 *
 	 * @var SOAPCore
 	 */
