@@ -18,7 +18,7 @@ To use and very simple, just follow the steps below
 {
   "require":
   {
-    "phpclasses/mtop-soap-server": ">=1.0.8"
+    "phpclasses/mtop-soap-server": ">=1.0.11"
   },
   "repositories":
   [
@@ -35,25 +35,25 @@ To use and very simple, just follow the steps below
 
 2 - On page you want to use the implementation of MTOM do the imports and necessary uses as:
 ```
-use SERVERSOAP\SEISOAPServer;
-use SERVERSOAP\implement\helper\SEISOAPhelper;
+use SERVERSOAP\SERVERSoap;
+use SERVERSOAP\implement\helper\SOAPhelper;
 ```
 
 3 - Create the object you want to use as follows
 
 if you want to use MTOM
 ```
-$servidorSoap = new SEISOAPServer ( "some.wsdl", array (
+$servidorSoap = new SERVERSoap ( "some.wsdl", array (
 'encoding'=>'ISO-8859-1',
-'attachment_type' => SEISOAPhelper::ATTACHMENTS_TYPE_MTOM
+'attachment_type' => SOAPhelper::ATTACHMENTS_TYPE_MTOM
 ) );
 $servidorSoap->setClass ( "some" );
 ```
 if you want to use the SwA
 ```
-$servidorSoap = new SEISOAPServer ( "some.wsdl", array (
+$servidorSoap = new SERVERSoap ( "some.wsdl", array (
 'encoding'=>'ISO-8859-1',
-'attachment_type' => SEISOAPhelper::ATTACHMENTS_TYPE_SWA
+'attachment_type' => SOAPhelper::ATTACHMENTS_TYPE_SWA
 ) );
 $servidorSoap->setClass ( "some" );
 ```
