@@ -40,7 +40,7 @@ use SERVERSOAP\implement\core\SoapResponse;
  *        
  *        
  */
-class SEISOAPServer extends \SoapServer {
+class SERVERSoap extends \SoapServer {
 	
 	/**
 	 * attrib for SOAP_1_1 ou SOAP_1_2
