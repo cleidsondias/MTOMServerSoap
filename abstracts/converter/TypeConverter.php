@@ -2,9 +2,6 @@
 
 namespace SERVERSOAP\abstracts\converter;
 
-require_once '/serversoap/interfaces/converter/TypeConverterInterface.php';
-require_once '/serversoap/interfaces/converter/SoapConverterInterface.php';
-
 use SERVERSOAP\interfaces\converter\TypeConverterInterface;
 use SERVERSOAP\interfaces\converter\SoapConverterInterface;
 use SERVERSOAP\implement\core\SOAPCore;

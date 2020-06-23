@@ -2,8 +2,6 @@
 
 namespace SERVERSOAP\implement\core;
 
-require_once '/serversoap/abstracts/core/AbstractSOAPCore.php';
-
 use SERVERSOAP\abstracoes\core\AbstractSOAPCore;
 use SERVERSOAP\implement\core\SoapResponse;
 use SERVERSOAP\implement\core\SoapRequest;

@@ -8,7 +8,7 @@ namespace SERVERSOAP\implement\helper;
  * @author Cleidson Dias do Nascimento - cleidsondias@hotmail.com
  *        
  */
-class SEISOAPhelper {
+class SOAPhelper {
 	
 	/**
 	 * Constant for base 64

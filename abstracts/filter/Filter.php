@@ -2,9 +2,7 @@
 
 namespace SERVERSOAP\abstracts\filter;
 
-require_once '/serversoap/implements/helper/SEISOAPhelper.php';
-
-use SERVERSOAP\implement\helper\SEISOAPhelper;
+use SERVERSOAP\implement\helper\SOAPhelper;
 
 /**
  * Abstract classe of filter.
@@ -17,9 +15,9 @@ abstract class Filter {
 	/**
 	 * attrib for attachamentType
 	 *
-	 * @var SEISOAPhelper::ATTACHMENTS_TYPE_SWA
+	 * @var SOAPhelper::ATTACHMENTS_TYPE_SWA
 	 */
-	protected $attachmentType = SEISOAPhelper::ATTACHMENTS_TYPE_SWA;
+	protected $attachmentType = SOAPhelper::ATTACHMENTS_TYPE_SWA;
 	
 	/**
 	 * construct of class

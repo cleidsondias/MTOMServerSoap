@@ -2,8 +2,6 @@
 
 namespace SERVERSOAP\abstracoes\core;
 
-require_once '/serversoap/implements/mime/part/MimePart.php';
-
 use SERVERSOAP\implement\core\SoapResponse;
 use SERVERSOAP\implement\core\SoapRequest;
 use SERVERSOAP\interfaces\filter\SoapResponseFilter;

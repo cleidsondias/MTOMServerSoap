@@ -2,11 +2,8 @@
 
 namespace SERVERSOAP\implement\mime\part;
 
-require_once '/serversoap/abstracts/mime/part/Part.php';
-require_once '/serversoap/implements/helper/SEISOAPhelper.php';
-
 use SERVERSOAP\abstracts\mime\part\Part;
-use SERVERSOAP\implement\helper\SEISOAPhelper;
+use SERVERSOAP\implement\helper\SOAPhelper;
 
 /**
  * Class for MultiPart
@@ -140,6 +137,6 @@ class MultiPart extends Part {
 	 * @return string
 	 */
 	protected function generateBoundary() {
-		return 'urn:uuid:' . SEISOAPhelper::generateUUID ();
+		return 'urn:uuid:' . SOAPhelper::generateUUID ();
 	}
 }

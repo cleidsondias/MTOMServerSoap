@@ -2,8 +2,6 @@
 
 namespace SERVERSOAP\interfaces\converter;
 
-require_once '/serversoap/implements/core/SOAPCore.php';
-
 use SERVERSOAP\implement\core\SOAPCore;
 
 /**

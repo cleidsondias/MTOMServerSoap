@@ -2,8 +2,6 @@
 
 namespace SERVERSOAP\implement\core;
 
-require_once '/serversoap/abstracts/message/SoapMessage.php';
-
 use SERVERSOAP\abstracts\message\SoapMessage;
 
 /**

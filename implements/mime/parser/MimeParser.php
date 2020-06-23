@@ -2,10 +2,6 @@
 
 namespace SERVERSOAP\implement\mime;
 
-require_once '/serversoap/implements/mime/part/MultiPart.php';
-require_once '/serversoap/implements/mime/part/MimePart.php';
-require_once '/serversoap/abstracts/mime/part/Part.php';
-
 use SERVERSOAP\implement\mime\part\MultiPart;
 use SERVERSOAP\implement\mime\part\MimePart;
 use SERVERSOAP\abstracts\mime\part\Part;

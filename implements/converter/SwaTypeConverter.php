@@ -2,7 +2,7 @@
 
 namespace SERVERSOAP\implement\converter;
 
-require_once '/serversoap/abstracts/converter/TypeConverter.php';
+//require_once '/serversoap/abstracts/converter/TypeConverter.php';
 
 use SERVERSOAP\abstracts\converter\TypeConverter;
 

@@ -2,17 +2,7 @@
 
 namespace SERVERSOAP;
 
-require_once 'serversoap/implements/core/SoapResponse.php';
-require_once 'serversoap/implements/core/SoapRequest.php';
-require_once 'serversoap/implements/converter/SwaTypeConverter.php';
-require_once 'serversoap/implements/converter/MtomTypeConverter.php';
-require_once 'serversoap/abstracts/converter/TypeConverter.php';
-require_once 'serversoap/implements/filter/MimeFilter.php';
-require_once 'serversoap/implements/filter/XmlMimeFilter.php';
-require_once 'serversoap/implements/helper/SEISOAPhelper.php';
-require_once 'serversoap/implements/core/SOAPCore.php';
-
-use SERVERSOAP\implement\helper\SEISOAPhelper;
+use SERVERSOAP\implement\helper\SOAPhelper;
 use SERVERSOAP\implement\filter\MimeFilter;
 use SERVERSOAP\implement\filter\XmlMimeFilter;
 use SERVERSOAP\implement\converter\SwaTypeConverter;
@@ -72,13 +62,13 @@ class SEISOAPServer extends \SoapServer {
 	 * @param array $options        	
 	 */
 	private function configureMime(array &$options) {
-		if (isset ( $options ['attachment_type'] ) && SEISOAPhelper::ATTACHMENTS_TYPE_BASE64 !== $options ['attachment_type']) {
+		if (isset ( $options ['attachment_type'] ) && SOAPhelper::ATTACHMENTS_TYPE_BASE64 !== $options ['attachment_type']) {
 			$mimeFilter = new MimeFilter ( $options ['attachment_type'] );
 			$this->soapCore->registerFilter ( $mimeFilter );
 			$converter = new TypeConverter ();
-			if (SEISOAPhelper::ATTACHMENTS_TYPE_SWA === $options ['attachment_type']) {
+			if (SOAPhelper::ATTACHMENTS_TYPE_SWA === $options ['attachment_type']) {
 				$converter = new SwaTypeConverter ();
-			} elseif (SEISOAPhelper::ATTACHMENTS_TYPE_MTOM === $options ['attachment_type']) {
+			} elseif (SOAPhelper::ATTACHMENTS_TYPE_MTOM === $options ['attachment_type']) {
 				$xmlMimeFilter = new XmlMimeFilter ( $options ['attachment_type'] );
 				$this->soapCore->registerFilter ( $xmlMimeFilter );
 				$converter = new MtomTypeConverter ();

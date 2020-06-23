@@ -2,8 +2,6 @@
 
 namespace SERVERSOAP\interfaces\filter;
 
-require_once '/serversoap/implements/core/SoapResponse.php';
-
 use SERVERSOAP\implement\core\SoapResponse;
 
 /**

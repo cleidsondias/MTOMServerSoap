@@ -2,19 +2,6 @@
 
 namespace SERVERSOAP\implement\filter;
 
-require_once '/serversoap/interfaces/filter/SoapRequestFilter.php';
-require_once '/serversoap/interfaces/filter/SoapResponseFilter.php';
-
-require_once '/serversoap/abstracts/filter/Filter.php';
-
-require_once '/serversoap/implements/helper/SEISOAPhelper.php';
-require_once '/serversoap/implements/core/SoapRequest.php';
-require_once '/serversoap/implements/core/SoapResponse.php';
-
-require_once '/serversoap/implements/mime/parser/MimeParser.php';
-require_once '/serversoap/implements/mime/part/MultiPart.php';
-require_once '/serversoap/implements/mime/part/MimePart.php';
-
 use SERVERSOAP\interfaces\filter\SoapRequestFilter;
 use SERVERSOAP\interfaces\filter\SoapResponseFilter;
 use SERVERSOAP\abstracts\filter\Filter;
@@ -23,7 +10,7 @@ use SERVERSOAP\implement\core\SoapResponse;
 use SERVERSOAP\implement\mime\MimeParser;
 use SERVERSOAP\implement\mime\part\MultiPart;
 use SERVERSOAP\implement\mime\part\MimePart;
-use SERVERSOAP\implement\helper\SEISOAPhelper;
+use SERVERSOAP\implement\helper\SOAPhelper;
 
 /**
  * Implementacao do filtro Mimefilter
@@ -85,7 +72,7 @@ class MimeFilter extends Filter implements SoapRequestFilter, SoapResponseFilter
 			$soapPart = new MimePart ( $response->getContent (), 'text/xml', 'utf-8', MimePart::ENCODING_EIGHT_BIT );
 			$soapVersion = $response->getVersion ();
 			// change content type headers for MTOM with SOAP 1.1
-			if ($soapVersion == SOAP_1_1 && $this->attachmentType & SEISOAPhelper::ATTACHMENTS_TYPE_MTOM) {
+			if ($soapVersion == SOAP_1_1 && $this->attachmentType & SOAPhelper::ATTACHMENTS_TYPE_MTOM) {
 				$multipart->setHeader ( 'Content-Type', 'type', 'application/xop+xml' );
 				$multipart->setHeader ( 'Content-Type', 'start-info', 'text/xml' );
 				$soapPart->setHeader ( 'Content-Type', 'application/xop+xml' );

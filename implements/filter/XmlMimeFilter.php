@@ -2,20 +2,10 @@
 
 namespace SERVERSOAP\implement\filter;
 
-require_once '/serversoap/interfaces/filter/SoapResponseFilter.php';
-
-require_once '/serversoap/abstracts/filter/Filter.php';
-
-require_once '/serversoap/implements/core/SoapResponse.php';
-
-require_once '/serversoap/implements/helper/SEISOAPhelper.php';
-
-require_once '/serversoap/implements/filter/FilterHelper.php';
-
 use SERVERSOAP\interfaces\filter\SoapResponseFilter;
 use SERVERSOAP\abstracts\filter\Filter;
 use SERVERSOAP\implement\core\SoapResponse;
-use SERVERSOAP\implement\helper\SEISOAPhelper;
+use SERVERSOAP\implement\helper\SOAPhelper;
 use SERVERSOAP\implement\filter\FilterHelper;
 
 /**
@@ -42,11 +32,11 @@ class XmlMimeFilter extends Filter implements SoapResponseFilter {
 		$filterHelper = new FilterHelper ( $dom );
 		
 		// adiciona o namespace se nescessario
-		$filterHelper->addNamespace ( SEISOAPhelper::PFX_XMLMIME, SEISOAPhelper::NS_XMLMIME );
+		$filterHelper->addNamespace ( SOAPhelper::PFX_XMLMIME, SOAPhelper::NS_XMLMIME );
 		
 		// obtem o elemento xsd:base64binary
 		$xpath = new \DOMXPath ( $dom );
-		$xpath->registerNamespace ( 'XOP', SEISOAPhelper::NS_XOP );
+		$xpath->registerNamespace ( 'XOP', SOAPhelper::NS_XOP );
 		$query = '//XOP:Include/..';
 		$nodes = $xpath->query ( $query );
 		
@@ -56,7 +46,7 @@ class XmlMimeFilter extends Filter implements SoapResponseFilter {
 				if ($node->hasAttribute ( 'contentType' )) {
 					$contentType = $node->getAttribute ( 'contentType' );
 					$node->removeAttribute ( 'contentType' );
-					$filterHelper->setAttribute ( $node, SEISOAPhelper::NS_XMLMIME, 'contentType', $contentType );
+					$filterHelper->setAttribute ( $node, SOAPhelper::NS_XMLMIME, 'contentType', $contentType );
 				}
 			}
 		}

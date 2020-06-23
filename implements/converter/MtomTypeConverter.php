@@ -2,12 +2,8 @@
 
 namespace SERVERSOAP\implement\converter;
 
-require_once '/serversoap/abstracts/converter/TypeConverter.php';
-require_once '/serversoap/implements/helper/SEISOAPhelper.php';
-require_once '/serversoap/implements/mime/part/MimePart.php';
-
 use SERVERSOAP\abstracts\converter\TypeConverter;
-use SERVERSOAP\implement\helper\SEISOAPhelper;
+use SERVERSOAP\implement\helper\SOAPhelper;
 use SERVERSOAP\implement\mime\part\MimePart;
 
 /**
@@ -45,7 +41,7 @@ class MtomTypeConverter extends TypeConverter {
 	public function convertXmlToPhp($data) {
 		$doc = new \DOMDocument ();
 		$doc->loadXML ( $data );
-		$includes = $doc->getElementsByTagNameNS ( SEISOAPhelper::NS_XOP, 'Include' );
+		$includes = $doc->getElementsByTagNameNS ( SOAPhelper::NS_XOP, 'Include' );
 		$include = $includes->item ( 0 );
 		
 		// convert href -> myhref for external references as PHP throws exception in this case
@@ -84,7 +80,7 @@ class MtomTypeConverter extends TypeConverter {
 		$doc->appendChild ( $node );
 		
 		// add xop:Include element
-		$xinclude = $doc->createElementNS ( SEISOAPhelper::NS_XOP, SEISOAPhelper::PFX_XOP . ':Include' );
+		$xinclude = $doc->createElementNS ( SOAPhelper::NS_XOP, SOAPhelper::PFX_XOP . ':Include' );
 		$xinclude->setAttribute ( 'href', 'cid:' . $contentId );
 		$node->appendChild ( $xinclude );
 		

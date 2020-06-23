@@ -2,11 +2,8 @@
 
 namespace SERVERSOAP\implement\mime\part;
 
-require_once '/serversoap/abstracts/mime/part/Part.php';
-require_once '/serversoap/implements/helper/SEISOAPhelper.php';
-
 use SERVERSOAP\abstracts\mime\part\Part;
-use SERVERSOAP\implement\helper\SEISOAPhelper;
+use SERVERSOAP\implement\helper\SOAPhelper;
 
 /**
  * Classe para tratar o MimePart
@@ -151,7 +148,7 @@ class MimePart extends Part {
 	 * @return string
 	 */
 	protected function generateContentId() {
-		return 'urn:uuid:' . SEISOAPhelper::generateUUID ();
+		return 'urn:uuid:' . SOAPhelper::generateUUID ();
 	}
 }
 
