@@ -13,13 +13,28 @@ This package is somewhat inspired in the BeSimple SOAP server package.
 
 To use and very simple, just follow the steps below
 
-1 - Copy the implementation to a subfolder in your project called serversoap
+1 - Add the dependencie in your projetct
+```
+{
+  "require":
+  {
+    "phpclasses/mtop-soap-server": ">=1.0.8"
+  },
+  "repositories":
+  [
+    {
+      "type": "composer",
+      "url": "https:\/\/www.phpclasses.org\/"
+    },
+    {
+      "packagist": false
+    }
+  ]
+}
+```
 
 2 - On page you want to use the implementation of MTOM do the imports and necessary uses as:
 ```
-require_once 'seisoap/SEISOAPServer.php';
-require_once 'serversoap/implements/helper/SEISOAPhelper.php';
-
 use SERVERSOAP\SEISOAPServer;
 use SERVERSOAP\implement\helper\SEISOAPhelper;
 ```
@@ -45,8 +60,6 @@ $servidorSoap->setClass ( "some" );
 
 And finally call the object as an example below
 ```
-// Only process if accessed via POST
-if ($_SERVER['REQUEST_METHOD']=='POST') {	
-$servidorSoap->handle($HTTP_RAW_POST_DATA);
-}
+$servidorSoap->handle();
+
 ```
