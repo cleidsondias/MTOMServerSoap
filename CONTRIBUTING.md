@@ -1,9 +1,9 @@
 
-## Contributing to Ignis Inventum Patterns
+## Contributing to MTOM Server Soap
 
 Contributions to Ignis Inventum Patterns are welcome and appreciated. Please read this document to understand the process for contributing.
 
-## tom-server-soap
+## # MTOM Server Soap
 Some Web service APIs take as parameters files that may contain binary data.
 
 The MTOM W3C recommendation defines how binary data can be transmitted as a binary attachment. This way it avoids the size overhead and the loss in speed of the data transmission.
