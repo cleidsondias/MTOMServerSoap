@@ -17,14 +17,14 @@ This package is somewhat inspired in the BeSimple SOAP server package.
 
 To use and very simple, just follow the steps below
 
-## :rocket: Technologies
+## Technologies
 This project was developed with the following technologies:
 -  [PHP](https://www.php.net/)
 
-## :warning: Prerequisites
+## Prerequisites
 -  [Composer](https://getcomposer.org/)
 
-## :information_source: How To Use
+## How To Use
 ``` bash
 $ composer require phpclasses/mtop-soap-server
 ```
