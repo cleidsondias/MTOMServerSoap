@@ -2,6 +2,7 @@
 
 [![Latest Version](https://img.shields.io/github/v/tag/cleidsondias/mtom-server-soap.svg?style=flat-square)](https://github.com/cleidsondias/mtom-server-soap/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 
 Some Web service APIs take as parameters files that may contain binary data.
