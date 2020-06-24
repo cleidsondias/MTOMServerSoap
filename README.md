@@ -24,12 +24,12 @@ This project was developed with the following technologies:
 ## Prerequisites
 -  [Composer](https://getcomposer.org/)
 
-## How To Use
+## Install
 ``` bash
 $ composer require phpclasses/mtop-soap-server
 ```
 
-## Usage
+## How To Use
 ``` php
 use SERVERSOAP\SERVERSoap;
 use SERVERSOAP\implement\helper\SOAPhelper;
