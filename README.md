@@ -17,16 +17,19 @@ This package is somewhat inspired in the BeSimple SOAP server package.
 
 To use and very simple, just follow the steps below
 
-## Install
+## :rocket: Technologies
+This project was developed with the following technologies:
+-  [PHP](https://www.php.net/)
 
-Via Composer
+## :warning: Prerequisites
+-  [Maven](https://maven.apache.org/)
 
+## :information_source: How To Use
 ``` bash
 $ composer require phpclasses/mtop-soap-server
 ```
 
 ## Usage
-
 ``` php
 use SERVERSOAP\SERVERSoap;
 use SERVERSOAP\implement\helper\SOAPhelper;
@@ -51,3 +54,8 @@ $servidorSoap = new SERVERSoap ( "some.wsdl", array (
 $servidorSoap->setClass ( "some" );
 $servidorSoap->handle();
 ```
+
+if you want contribute for us, read the [CONTRIBUTING.md](/CONTRIBUTING.md)
+
+## :memo: License
+This project is under the BSD-2-Clause license. See the [LICENSE](https://github.com/cleidsondias/ignis-inventum-patterns/blob/developer/LICENSE) for more information.
