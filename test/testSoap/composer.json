@@ -1,0 +1,14 @@
+{
+  "require":
+  {
+    "phpclasses/mtop-soap-server": ">=1.0.11",
+    "besimple/soap-client": "0.2.*@dev"
+  },
+  "repositories":
+  [
+    {
+      "type": "composer",
+      "url": "https:\/\/www.phpclasses.org\/"
+    }
+  ]
+}
