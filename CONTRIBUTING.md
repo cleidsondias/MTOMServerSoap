@@ -3,11 +3,16 @@
 
 Contributions to Ignis Inventum Patterns are welcome and appreciated. Please read this document to understand the process for contributing.
 
-## Ignis Inventum Patterns
-fornecer
-Ignis Inventum Patterns is a project that has two objectives, the firt is a serve a model for implementation of dessing patterns (GoF) using
-the JAVA language. the second is provide a group of interfaces for using in another projects for implementation one o varios patterns in a
-another project. So, depending on where you see your contribution fit, please focus on the respective repository.
+## tom-server-soap
+Some Web service APIs take as parameters files that may contain binary data.
+
+The MTOM W3C recommendation defines how binary data can be transmitted as a binary attachment. This way it avoids the size overhead and the loss in speed of the data transmission.
+
+SwA is a W3C Note. It was submitted as a proposal, but it was not adopted by the W3C. Instead, MTOM is the W3C Recommendation for handling binary data in SOAP messages. With the release of SOAP 1.2 additionally the note SOAP 1.2 Attachment Feature was published.
+
+This package extends the PHP SOAP server class to be able to decode binary data attachments sent in a SOAP request using MTOM (Message Transmission Optimization Mechanism) or SwA (Soap With Attachments) and can detect binary files encoded more efficiently for transmission and decode the attached binary data for regular SOAP server handling.
+
+This package is somewhat inspired in the BeSimple SOAP server package.
 
 ## Contribution process
 
