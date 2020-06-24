@@ -1,5 +1,8 @@
-MTOM Server Soap
-==============
+# MTOM Server Soap
+
+[![Latest Version](https://img.shields.io/github/v/tag/cleidsondias/mtom-server-soap.svg?style=flat-square)](https://github.com/cleidsondias/mtom-server-soap/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+
 
 Some Web service APIs take as parameters files that may contain binary data.
 
@@ -13,53 +16,37 @@ This package is somewhat inspired in the BeSimple SOAP server package.
 
 To use and very simple, just follow the steps below
 
-1 - Add the dependencie in your projetct
-```
-{
-  "require":
-  {
-    "phpclasses/mtop-soap-server": ">=1.0.11"
-  },
-  "repositories":
-  [
-    {
-      "type": "composer",
-      "url": "https:\/\/www.phpclasses.org\/"
-    },
-    {
-      "packagist": false
-    }
-  ]
-}
+## Install
+
+Via Composer
+
+``` bash
+$ composer require phpclasses/mtop-soap-server
 ```
 
-2 - On page you want to use the implementation of MTOM do the imports and necessary uses as:
-```
+## Usage
+
+``` php
 use SERVERSOAP\SERVERSoap;
 use SERVERSOAP\implement\helper\SOAPhelper;
 ```
 
-3 - Create the object you want to use as follows
-
 if you want to use MTOM
-```
+``` php
 $servidorSoap = new SERVERSoap ( "some.wsdl", array (
 'encoding'=>'ISO-8859-1',
 'attachment_type' => SOAPhelper::ATTACHMENTS_TYPE_MTOM
 ) );
 $servidorSoap->setClass ( "some" );
+$servidorSoap->handle();
 ```
+
 if you want to use the SwA
-```
+``` php
 $servidorSoap = new SERVERSoap ( "some.wsdl", array (
 'encoding'=>'ISO-8859-1',
 'attachment_type' => SOAPhelper::ATTACHMENTS_TYPE_SWA
 ) );
 $servidorSoap->setClass ( "some" );
-```
-
-And finally call the object as an example below
-```
 $servidorSoap->handle();
-
 ```
